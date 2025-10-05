@@ -1,0 +1,40 @@
+/* Centrar todo el contenedor en el centro de la pantalla */
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh; /* ocupa toda la altura de la ventana */
+  width: 100vw;  /* ocupa todo el ancho */
+  background-color: #111; /* opcional, para contraste */
+  gap: 12px;
+}
+
+#gameBoard {
+  border: 3px solid #222;
+  background: #000;
+  image-rendering: pixelated;
+}
+
+#scoreText {
+  color: white;
+  font-size: 22px;
+  font-family: monospace;
+}
+
+.controls button {
+  padding: 10px 16px;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.controls button:hover {
+  background: #3aa0ff;
+  transform: scale(1.05);
+}
