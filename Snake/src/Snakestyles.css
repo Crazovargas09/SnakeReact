@@ -1,13 +1,12 @@
-/* Centrar todo el contenedor en el centro de la pantalla */
 #gameContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  height: 100vh; /* ocupa toda la altura de la ventana */
-  width: 100vw;  /* ocupa todo el ancho */
-  background-color: #111; /* opcional, para contraste */
+  height: 100vh; 
+  width: 100vw; 
+  background-color: #111; 
   gap: 12px;
 }
 
@@ -18,23 +17,27 @@
 }
 
 #scoreText {
-  color: white;
-  font-size: 22px;
+  color: yellow;
+  font-size: 35px;
   font-family: monospace;
+  font-weight: bold;
 }
 
 .controls button {
-  padding: 10px 16px;
-  background: #1e90ff;
+  padding: 10px;
+  margin-left: 40px;
+  background: #e11eff;
   color: white;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 25px;
   transition: 0.2s;
 }
 
 .controls button:hover {
-  background: #3aa0ff;
+  background: #993aff;
+  color: yellow;
   transform: scale(1.05);
 }

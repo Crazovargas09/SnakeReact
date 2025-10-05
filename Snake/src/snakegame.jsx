@@ -1,11 +1,11 @@
-// src/SnakeGame.jsx
+
 import React, { useRef, useEffect, useState } from "react";
 import "./snakestyles.css";
 
 const WIDTH = 500;
 const HEIGHT = 500;
 const UNIT = 25;
-const TICK = 120; // ms between frames
+const TICK = 120; 
 
 const getRandomPos = (max) => Math.floor(Math.random() * (max / UNIT + 1)) * UNIT;
 
@@ -13,7 +13,7 @@ export default function SnakeGame() {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
 
-  // estado "mutante" que no dispara renders
+
   const snakeRef = useRef([
     { x: UNIT * 4, y: 0 },
     { x: UNIT * 3, y: 0 },
@@ -75,7 +75,7 @@ export default function SnakeGame() {
     ctx.fillStyle = "red";
     ctx.fillRect(foodRef.current.x, foodRef.current.y, UNIT, UNIT);
 
-    // snake
+  
     snakeRef.current.forEach((p, i) => {
       ctx.fillStyle = i === 0 ? "green" : "lime";
       ctx.fillRect(p.x, p.y, UNIT, UNIT);
@@ -131,10 +131,11 @@ export default function SnakeGame() {
     if (!ctx) return;
     ctx.fillStyle = "rgba(0,0,0,0.6)";
     ctx.fillRect(0, HEIGHT / 2 - 40, WIDTH, 80);
-    ctx.fillStyle = "white";
-    ctx.font = "32px sans-serif";
+    ctx.fillStyle = "red";
+    ctx.font = "34px sans-serif";
     ctx.textAlign = "center";
-    ctx.fillText("Game Over", WIDTH / 2, HEIGHT / 2 + 10);
+    ctx.fontWeight = "bold";
+    ctx.fillText("GAME OVER", WIDTH / 2, HEIGHT / 2 + 10);
   }
 
   function resetGame() {
@@ -156,11 +157,11 @@ export default function SnakeGame() {
 
   return (
     <div id="gameContainer">
+      <div id="scoreText">SCORE: {score}</div>
       <canvas ref={canvasRef} id="gameBoard" width={WIDTH} height={HEIGHT} />
-      <div id="scoreText">Score: {score}</div>
       <div className="controls">
-        <button id="resetButton" onClick={resetGame}>Reset</button>
-        {isGameOver && <button onClick={resetGame}>Play again</button>}
+        <button id="resetButton" onClick={resetGame}>RESET</button>
+        {isGameOver && <button onClick={resetGame}>PLAY AGAIN</button>}
       </div>
     </div>
   );

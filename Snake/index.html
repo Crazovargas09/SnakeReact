@@ -3,10 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>snake</title>
+    <meta name="viewport" content="width=device-width, initial-scale-1.0" />
+    <title>SnakeGame+</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        background-color: #121212;
+        color: #fff;
+        margin: 0; 
+        
+        
+        display: flex;
+        flex-direction: column; 
+        align-items: center;   
+        padding-top: 10px;     
+      }
+
+      .game-title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 5rem;
+        font-weight: 500;
+        color: #fff;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px rgb(221, 0, 255),
+          0 0 82px rgb(221, 0, 255),
+          0 0 92px rgb(221, 0, 255),
+          0 0 102px rgb(221, 0, 255),
+          0 0 151px rgb(221, 0, 255);
+        animation: pulse 2.5s infinite alternate;
+
+        margin-bottom: 50px; 
+      }
+      
+      @keyframes pulse {
+        to {
+          text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 18px #fff,
+            0 0 38px rgb(221, 0, 255),
+            0 0 70px rgb(221, 0, 255);
+        }
+      }
+    </style>
   </head>
   <body>
+    <h1 class="game-title">SnakeGame+</h1>
+
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
